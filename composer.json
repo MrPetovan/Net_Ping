@@ -2,7 +2,7 @@
     "name": "mrpetovan/net_ping",
 	"type": "library",
     "description": "More info available on: http://pear.php.net/package/Net_Ping",
-    "license": "PHP License",
+    "license": "PHP-3.01",
     "support": {
         "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Net_Ping",
         "source": "https://github.com/MrPetovan/Net_Ping"
