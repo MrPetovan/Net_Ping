@@ -869,7 +869,12 @@ class Net_Ping_Result
         // separated by slashes.
         $p2 = '[0-9\.]+/[0-9\.]+/[0-9\.]+/?[0-9\.]*';
 
-        $results = array();
+        $results = [
+	        'min' => null,
+	        'max' => null,
+	        'avg' => null,
+	        'stddev' => null
+        ];
         $matches = array();
         for ( $i=(count($lower)-1); $i>=0; $i-- ) {
             if ( preg_match('|('.$p1.')[^0-9]+('.$p2.')|i', $lower[$i], $matches) ) {
