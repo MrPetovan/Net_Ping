@@ -648,7 +648,12 @@ class Net_Ping_Result
     * @var int
     * @access private
     */
-    var $_round_trip = array(); /* array('min' => xxx, 'avg' => yyy, 'max' => zzz) */
+    var $_round_trip = [
+        'min' => null,
+        'max' => null,
+        'avg' => null,
+        'stddev' => null
+    ];
 
 
     /**
