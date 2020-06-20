@@ -1,8 +1,7 @@
 <?php
 require_once "Net/Ping.php";
-require_once 'PHPUnit/Framework/TestCase.php';
 
-class Net_Ping_ResultTest extends PHPUnit_Framework_TestCase {
+class Net_Ping_ResultTest extends \PHPUnit\Framework\TestCase {
 
     public static function data($os) {
         $result['netbsd'][] ="PING example.com (192.0.34.166): 56 data bytes";
@@ -90,7 +89,7 @@ class Net_Ping_ResultTest extends PHPUnit_Framework_TestCase {
         $result['aix'][] = "64 bytes from 148.87.9.44: icmp_seq=7 ttl=245 time=773 ms";
         $result['aix'][] = "64 bytes from 148.87.9.44: icmp_seq=8 ttl=245 time=855 ms";
         $result['aix'][] = "64 bytes from 148.87.9.44: icmp_seq=9 ttl=245 time=865 ms";
-        $result['aix'][] = "";-
+        $result['aix'][] = "";
         $result['aix'][] = "---oracle.com PING Statistics----";
         $result['aix'][] = "10 packets transmitted, 10 packets received, 0% packet loss";
         $result['aix'][] = "round-trip min/avg/max = 773/848/891 ms";
@@ -128,7 +127,7 @@ class Net_Ping_ResultTest extends PHPUnit_Framework_TestCase {
         $expect['hpux']['transmitted'] = 3;
         $expect['hpux']['loss'] = 0;
         $expect['hpux']['bytestotal'] = 192;
-        $expect['hpux']['targetip'] = NULL;
+        $expect['hpux']['targetip'] = '192.0.34.166';
 
         return array($result[$os], $expect[$os]);
     }

@@ -13,7 +13,7 @@ $input[] = "64 bytes from 148.87.9.44: icmp_seq=5 ttl=245 time=820 ms";
 $input[] = "64 bytes from 148.87.9.44: icmp_seq=7 ttl=245 time=773 ms";
 $input[] = "64 bytes from 148.87.9.44: icmp_seq=8 ttl=245 time=855 ms";
 $input[] = "64 bytes from 148.87.9.44: icmp_seq=9 ttl=245 time=865 ms";
-$input[] = "";-
+$input[] = "";
 $input[] = "---oracle.com PING Statistics----";
 $input[] = "10 packets transmitted, 10 packets received, 0% packet loss";
 $input[] = "round-trip min/avg/max = 773/848/891 ms";
