@@ -15,9 +15,6 @@
  * @link     https://pear.php.net/package/Net_Ping
  */
 
-require_once "PEAR.php";
-require_once "OS/Guess.php";
-
 define('NET_PING_FAILED_MSG',                     'execution of ping failed'        );
 define('NET_PING_HOST_NOT_FOUND_MSG',             'unknown host'                    );
 define('NET_PING_INVALID_ARGUMENTS_MSG',          'invalid argument array'          );
