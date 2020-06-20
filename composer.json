@@ -43,7 +43,7 @@
         }
     },
     "require": {
-        "pear/pear_exception": "*"
+        "pear/pear-core-minimal": "^1.10"
     },
     "require-dev": {
         "phpunit/phpunit": "*"
