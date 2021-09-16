@@ -1,7 +1,7 @@
 <?php
 require_once "Net/Ping.php";
 
-class Net_Ping_ResultTest extends \PHPUnit\Framework\TestCase {
+class Net_PingResultTest extends \PHPUnit\Framework\TestCase {
 
     public static function data($os) {
         $result['netbsd'][] ="PING example.com (192.0.34.166): 56 data bytes";
@@ -145,7 +145,7 @@ class Net_Ping_ResultTest extends \PHPUnit\Framework\TestCase {
     public function testShouldParseResults($os) {
         list($result, $expect) = self::data($os);
 
-        $ping = Net_Ping_Result::factory($result, $os);
+        $ping = Net_PingResult::factory($result, $os);
 
         $this->assertFalse(PEAR::isError($ping),  "factory()");
         $this->assertEquals($expect['min'], $ping->getMin());
@@ -213,7 +213,7 @@ class Net_Ping_ResultTest extends \PHPUnit\Framework\TestCase {
         // Net_Ping would do on this system.
         $OS_Guess = new OS_Guess;
         $sysname  = $OS_Guess->getSysname();
-        $npr = Net_Ping_Result::factory($input, $sysname);
+        $npr = Net_PingResult::factory($input, $sysname);
 
         $this->assertFalse(PEAR::isError($npr));
 
