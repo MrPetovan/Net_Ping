@@ -85,7 +85,7 @@ class Net_PingResult
 	/**
 	 * Statistical information about the ping
 	 *
-	 * @var int
+	 * @var array
 	 * @access private
 	 */
 	var $_round_trip = [
@@ -95,6 +95,29 @@ class Net_PingResult
 		'stddev' => null
 	];
 
+	/**
+	 * Number of packages transmitted
+	 *
+	 * @var int
+	 * @access private
+	 */
+	var $_transmitted;
+
+	/**
+	 * Number of packages received
+	 *
+	 * @var int
+	 * @access private
+	 */
+	var $_received;
+
+	/**
+	 * Number of packages lost
+	 *
+	 * @var int
+	 * @access private
+	 */
+	var $_loss;
 
 	/**
 	 * Constructor for the Class
@@ -641,7 +664,7 @@ class Net_PingResult
 	/**
 	 * Accessor for $this->_transmitted;
 	 *
-	 * @return array statistical information
+	 * @return int number of packets transmitted
 	 * @access private
 	 */
 	function getTransmitted()
@@ -652,7 +675,7 @@ class Net_PingResult
 	/**
 	 * Accessor for $this->_received;
 	 *
-	 * @return array statistical information
+	 * @return int number of packets received
 	 * @access private
 	 */
 	function getReceived()
@@ -663,7 +686,7 @@ class Net_PingResult
 	/**
 	 * Accessor for $this->_loss;
 	 *
-	 * @return array statistical information
+	 * @return int number of packets lost
 	 * @access private
 	 */
 	function getLoss()
